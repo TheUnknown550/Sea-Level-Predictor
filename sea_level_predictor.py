@@ -25,9 +25,12 @@ def draw_plot():
     slope2, intercept2, r_value2, p_value2, std_err2 = linregress(x2, y2)
     plt.plot(x2, slope2*x2 + intercept2, color='green')
 
-    # Add labels and title
+    # 5. Add labels and title
+    plt.xlabel("Year")
+    plt.ylabel("Sea Level (inches)")
+    plt.title("Rise in Sea Level")
+    plt.legend(["All Data", "Fit (2000)"])
 
-    
     # Save plot and return data for testing (DO NOT MODIFY)
     plt.savefig('sea_level_plot.png')
     return plt.gca()
